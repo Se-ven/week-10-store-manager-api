@@ -7,7 +7,9 @@ POST http://localhost:3001/logos
 Content-Type: application/json
 
 {
-  "name": "Tiger Woods"
+  "name": "James Baldwin",
+  "description": "Powerful human doing his thing on the golf course",
+  "colors": ["blue", "green", "red"]
 }
 
 ### Test the PUT which should change a logo

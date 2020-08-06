@@ -7,8 +7,8 @@ POST http://localhost:3001/products
 Content-Type: application/json
 
 {
-  "title": "Golf Pajamas",
-  "description": "The great golf pants"
+  "title": "Neon pink and purple golf shoes with spikes",
+  "description": "The best shoes for golfing, but also out on the town. "
 }
 
 ### Test the PUT which should change a product
