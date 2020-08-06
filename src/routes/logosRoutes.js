@@ -3,11 +3,11 @@ const router = require('express').Router();
 const { deleteLogo, updateLogo, createLogo, getLogos } = require('../database/logos');
 
 // See all
-router.get('/logos', async (req, res) => {
+router.get('/', async (req, res) => {
   res.send(await getLogos());
 });
 // Make new logo
-router.post('/logos', async (req, res) => {
+router.post('/', async (req, res) => {
   const newLogo = req.body;
   await createLogo(newLogo);
   res.send({
