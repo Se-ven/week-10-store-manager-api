@@ -1,6 +1,6 @@
 
 const router = require('express').Router();
-const {deleteProduct, updateProduct, createProduct, getProducts} = require('../database/products');
+const { deleteProduct, updateProduct, createProduct, getProducts } = require('../database/products');
 
 router.get('/', async (apiRequest, apiResponse) => {
   apiResponse.send(await getProducts());
@@ -28,7 +28,7 @@ router.delete('/:productId', async (apiRequest, apiResponse) => {
 // endpoint to update a product
 router.put('/:id', async (apiRequest, apiResponse) => {
   const updatedProduct = apiRequest.body;
-  console.log({ updatedProduct})
+  console.log({ updatedProduct })
   await updateProduct(apiRequest.params.id, updatedProduct);
   apiResponse.send({ message: 'Product updated.' });
 });

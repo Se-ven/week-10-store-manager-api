@@ -4,8 +4,7 @@ const { ObjectID } = require('mongodb');
 
 // a "collection" in mongo is a lot like a list which is a lot like an Array
 const collectionName = 'logos';
-var getUserName = require('git-user-name');
-console.log(getUserName());
+const getUserName = require('git-user-name');
 
 async function createLogo(logo) {
   const database = await getDatabase();
