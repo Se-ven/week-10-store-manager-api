@@ -18,15 +18,16 @@ router.post('/', async (apiRequest, apiResponse) => {
 });
 
 // Delete logo
-router.delete('/:logoId', async (apiRequest, apiResponse) => {
-  await deleteLogo(apiRequest.params.productId);
+router.delete('/:id', async (apiRequest, apiResponse) => {
+  await deleteLogo(apiRequest.params.logoId);
   apiResponse.send({ message: 'Logo deleted.' });
 });
+
 // Update logo
 router.put('/:id', async (apiRequest, apiResponse) => {
   const updatedLogo = apiRequest.body;
-  console.log({ updatedProduct })
-  await updateLogo(apiRequest.params.id, updatedProduct);
+  console.log({ updatedLogo })
+  await updateLogo(apiRequest.params.id, updatedLogo);
   apiResponse.send({ message: 'Logo updated.' });
 });
 

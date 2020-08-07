@@ -13,9 +13,17 @@ Content-Type: application/json
 }
 
 ### Test the PUT which should change a logo
-PUT http://localhost:3001/logos/
+PUT http://localhost:3001/logos/5f2cad97d33e2b7cbbec12fb
 Content-Type: application/json
 
 {
-  "name": "Super Logo"
+  "name": "ELF",
+  "description": "Audio sponsor for sports",
+  "colors": ["green", "pink"]
 }
+
+### Test the DELETE which should remove the logo
+
+DELETE http://localhost:3001/logos/5f2c997336397a6a3691d185
+
+
