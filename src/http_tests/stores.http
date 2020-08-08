@@ -1,8 +1,16 @@
 ### Test the stores
 ### stores are the customers such as each golf course
 
-GET http://localhost:3001/stores
+GET http://localhost:3001/store
 
 ### Test creating a store
+
+POST http://localhost:3001/stores
+Content-Type: application/json
+
+{
+    "name": "Greenfield Club and Spa",
+    "location": "Golfsville, IN"
+}
 
 ### Test the PUT which should change a store
