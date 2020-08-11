@@ -1,8 +1,23 @@
-### Test the stores
-### stores are the customers such as each golf course
+### Test the categories
+### Get categories
+GET http://localhost:3001/categories
 
-GET http://localhost:3001/stores
+### Test creating a category
+POST http://localhost:3001/categories
+Content-Type: application/json
 
-### Test creating a store
+{
+    "Type": "Sport implements (golf clubs)"
+    
+}
+### Test the PUT which should change a prod. category
+PUT http://localhost:3001/categories/5f30cb227602413cd9646895
+Content-Type: application/json
 
-### Test the PUT which should change a store
+{
+    "Type": "Sport supplies (club handle padding)",
+    "Message": "Changed from 'Sport implements'"
+}
+
+### Test the Delete which should remove a category via id ref
+DELETE http://localhost:3001/categories/5f30c71858bf293b16136224

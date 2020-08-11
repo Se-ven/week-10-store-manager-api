@@ -7,5 +7,31 @@
 GET http://localhost:3001/product-types
 
 ### Test creating a type
+POST http://localhost:3001/product-types
+Content-Type: application/json
+
+{
+    "category1": "Clubs",
+    "category2": "Bags",
+    "category3": "Clothing",
+    "category4": "Supplies",
+    "category5": "Promos",
+    "category6": "Cross-training gear"
+}
 
 ### Test the PUT which should change a type
+PUT http://localhost:3001/product-types/5f3209a03f9dd66effa26510
+Content-Type: application/json
+
+{
+    "category1": "Clubs",
+    "category2": "Bags",
+    "category3": "Clothing",
+    "category4": "Supplies",
+    "category5": "Publicity tchotchkes",
+    "category6": "Cross-training gear",
+    "Updated": "Updated category 5"
+}
+
+### Test the delete request
+DELETE http://localhost:3001/product-types/

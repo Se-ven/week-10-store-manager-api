@@ -19,7 +19,7 @@ router.post('/', async (apiRequest, apiResponse) => {
 
 // Delete logo
 router.delete('/:id', async (apiRequest, apiResponse) => {
-  await deleteLogo(apiRequest.params.logoId);
+  await deleteLogo(apiRequest.params.id);
   apiResponse.send({ message: 'Logo deleted.' });
 });
 
